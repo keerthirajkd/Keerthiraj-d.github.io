@@ -722,3 +722,18 @@ function hashCode(str) {
 function getHashedIndexFromArray(array, str) {
   return array[Math.abs(hashCode(str)) % array.length];
 }
+
+
+
+
+
+function pendoTrack(name, data) {
+    if (pendo && pendo.isReady && pendo.isReady()) {
+        return pendo.track(name, data);
+    }
+    setTimeout(function() {
+      pendoTrack(name, data);
+    }, 500);
+}
+
+pendoTrack("NAME", { PROPERTY1: "PROPERTY1VALUE", ... });
