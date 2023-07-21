@@ -324,8 +324,8 @@
                         ((c = e.createElement(a)).async = !0), (c.src = "https://cdn.pendo.io/agent/static/6be71c61-78d6-4429-6818-fb14186f4821/pendo.js"), (l = e.getElementsByTagName(a)[0]).parentNode.insertBefore(c, l);
                     })(window, document, "script", "pendo"),
 
-                   var rolles=["admin", "user"];  
-            if(rolles !== "admin")
+                   let database= "production";  
+            if(database !== "DEMO")
             {
                     pendo.initialize({     visitor: 
                                         { 
