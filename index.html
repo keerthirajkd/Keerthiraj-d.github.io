@@ -323,7 +323,14 @@
                             })(t[n]);
                         ((c = e.createElement(a)).async = !0), (c.src = "https://cdn.pendo.io/agent/static/6be71c61-78d6-4429-6818-fb14186f4821/pendo.js"), (l = e.getElementsByTagName(a)[0]).parentNode.insertBefore(c, l);
                     })(window, document, "script", "pendo"),
-                    
+
+                     var role;
+            if(role == admin)
+            {
+            console.log("Hi admin");
+            }
+                else
+            {
                     pendo.initialize({     visitor: 
                                         { 
                                           id: visitor || "VISITOR-UNIQUE-ID", role: role || "user" }, 
@@ -331,7 +338,9 @@
                                           account: { id: account_id || "ACCOUNT-UNIQUE-ID" }
                                         
                                      })); 
-          
+            }
+            
+            
         </script>
         <title>pizzaCRM</title>
         <link href="/static/css/2.fed9dcda.chunk.css" rel="stylesheet" />
